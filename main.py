@@ -1,9 +1,9 @@
-from app.services.email_analyzer import analyze_email
+from app.services.email_receiver import email_receiver
 
-def main():
-    email="Your interview is tomorrow at 3 PM."
-    event=analyze_email(email)
-    print(event)
 
-if __name__=="__main__":
+def main() -> None:
+    email_receiver()
+
+
+if __name__ == "__main__":
     main()

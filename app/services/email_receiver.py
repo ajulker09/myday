@@ -1,4 +1,5 @@
 from app.services.email_analyzer import analyze_email
+from app.schemas.email_analysis import EmailAnalysis
 
 
 SAMPLE_EMAIL = """\
@@ -14,7 +15,7 @@ Alex
 """
 
 
-def email_receiver() -> str:
+def email_receiver() -> EmailAnalysis:
     """Pass a sample received email to the analyzer and return its output."""
     return analyze_email(SAMPLE_EMAIL)
 
